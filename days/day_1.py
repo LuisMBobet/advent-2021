@@ -1,7 +1,8 @@
 from utils.file_service import read_file_from_resources
+from typing import List
 
 
-def part_1(data_set: str):
+def part_1(data_set: List[str]) -> int:
     last_number = data_set[0]
     increased_number_count = 0
     for number in data_set[1::]:
@@ -11,7 +12,7 @@ def part_1(data_set: str):
     return increased_number_count
 
 
-def part_2(data_set: str):
+def part_2(data_set: List[str]) -> int:
     last_sum = sum(data_set[0:3])
     increased_sum_count = 0
     for index in range(2, len(data_set)):
