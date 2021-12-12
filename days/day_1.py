@@ -1,8 +1,7 @@
 from utils.file_service import read_file_from_resources
 
 
-def part_1():
-    data_set = get_input_data()
+def part_1(data_set: str):
     last_number = data_set[0]
     increased_number_count = 0
     for number in data_set[1::]:
@@ -12,8 +11,7 @@ def part_1():
     return increased_number_count
 
 
-def part_2():
-    data_set = get_input_data()
+def part_2(data_set: str):
     last_sum = sum(data_set[0:3])
     increased_sum_count = 0
     for index in range(2, len(data_set)):
@@ -24,6 +22,6 @@ def part_2():
     return increased_sum_count
 
 
-def get_input_data() -> str:
+def get_input_data(file_name: str) -> str:
     return list(map(int,
-                    read_file_from_resources("day_1.txt").split("\n")[0:-1]))
+                    read_file_from_resources(file_name).split("\n")[0:-1]))
