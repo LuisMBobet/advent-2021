@@ -11,6 +11,7 @@ def part_1(data_set: List[str]) -> int:
                           if len(value) in desired_unique_character_lengths])
     return occurences
 
+
 def get_input_data(file_name: str) -> List[str]:
     return list(map(str,
                     read_file_from_resources(file_name).split("\n")[0: -1]))
